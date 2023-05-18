@@ -2,10 +2,8 @@
 // Données factices pour la démonstration
 $classe = 'CP A';
 $eleves = [
-    ['id' => 1, 'nom' => 'John Doe', 'note' => 80],
-    ['id' => 2, 'nom' => 'Jane Smith', 'note' => 90],
-    ['id' => 3, 'nom' => 'Alice Johnson', 'note' => 85],
-    ['id' => 4, 'nom' => 'Bob Williams', 'note' => 70],
+    ['id' => 1, 'nom' => 'BA','prenom' => 'ADA','telephone' => '775435676','identifiant'=>'interne', 'note' => 80],
+   
 ];
 
 // Effectif de la classe
@@ -46,7 +44,10 @@ $moyenne = $effectif > 0 ? $totalNotes / $effectif : 0;
                 <tr>
                     <th>ID</th>
                     <th>Nom</th>
-                    <th>Note</th>
+                    <th>PRENOM</th>
+                    <th>telephone</th>
+                    <th>identifiant</th>
+                    <th>note</th>
                     <th>Mettre à jour</th>
                 </tr>
             </thead>
@@ -55,7 +56,11 @@ $moyenne = $effectif > 0 ? $totalNotes / $effectif : 0;
                     <tr>
                         <td><?php echo $eleve['id']; ?></td>
                         <td><?php echo $eleve['nom']; ?></td>
+                        <td><?php echo $eleve['prenom']; ?></td>
+                        <td><?php echo $eleve['telephone']; ?></td>
+                        <td><?php echo $eleve['identifiant']; ?></td>
                         <td><?php echo $eleve['note']; ?></td>
+                        
                         <td>
                             <form method="POST">
                                 <div class="input-group">
@@ -71,6 +76,12 @@ $moyenne = $effectif > 0 ? $totalNotes / $effectif : 0;
             </tbody>
         </table>
     </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
 </body>
 
 </html>
