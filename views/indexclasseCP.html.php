@@ -37,15 +37,15 @@
             </li>
             <li class="list-group-item class-item">
                 <a class="mb-1" href="eleveclasseCPA.html.php">CP A</a>
-                <p class="mb-1">Description de la classe 2</p>
+
             </li>
             <li class="list-group-item class-item">
                 <h5 class="mb-1">CP B</h5>
-                <p class="mb-1">Description de la classe 3</p>
+
             </li>
             <li class="list-group-item class-item">
                 <h5 class="mb-1">CP C</h5>
-                <p class="mb-1">Description de la classe 4</p>
+               
             </li>
         </ul>
     </div>

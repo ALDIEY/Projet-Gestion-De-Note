@@ -34,7 +34,7 @@
         <ul class="list-group class-list">
             <li class="list-group-item class-item">
                 <h5 class="mb-1">CI</h5>
-                <p class="mb-1">Description de la classe 1</p>
+
 
             </li>
         </ul>
