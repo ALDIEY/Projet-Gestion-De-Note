@@ -29,7 +29,7 @@
             <a class="nav-link text-white" href="indexniveau.html.php">NIVEAU</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link text-white" href="indexclasse.html.php">CLASSE</a>
+            <a class="nav-link text-white" href="indexclasseCP.html.php">CLASSE</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link text-white" href="indexannee.html.php">ANNÉES</a>

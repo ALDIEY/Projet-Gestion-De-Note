@@ -14,71 +14,80 @@
 </head>
 <body>
 <?php include 'indexmenu.html.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des niveaux de l'année courante</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .level-list {
+            padding: 0;
+        }
+
+        .level-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .level-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
     <div class="container">
-        <h1>Les Niveaux de Classe</h1>
-        <button id="btnAjouter" class="btn btn-primary">Ajouter</button>
+        <h1>Liste des niveaux de l'année courante</h1>
+        <ul class="list-group level-list">
+            <li class="list-group-item level-item">
+                <a class="mb-1" href="indexclasseCI.html.php" >CI</a>
+                
+            </li>
+            <li class="list-group-item level-item">
+                <a class="mb-1" href="indexclasseCP.html.php">CP</a>
 
-        <hr>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Niveau</th>
-                    <th>Nombre d'Élèves</th>
-                    <td>
-                        <a href="#" class="text-danger mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
-                    </td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>CP</td>
-                    <td>25</td>
-                    <td>
-                        <a href="#" class="text-danger mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>CE1</td>
-                    <td>28</td>
-                    <td>
-                        <a href="#" class="text-danger mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>CE2</td>
-                    <td>30</td>
-                    <td>
-                        <a href="#" class="text-danger mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>CM1</td>
-                    <td>27</td>
-                    <td>
-                        <a href="#" class="text-danger mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>CM2</td>
-                    <td>29</td>
-                    <td>
-                        <a href="#" class="text-danger mr-2" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">C1</h5>
+
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">C2</h5>
+
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">CM1</h5>
+
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">CM2</h5>
+
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">6eme</h5>
+
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">5eme</h5>
+
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">4eme</h5>
+
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">3eme</h5>
+                
+            </li>
+            <li class="list-group-item level-item">
+                <h5 class="mb-1">2nd</h5>
+                
+            </li>
+        </ul>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
 
+</html>
 

@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <?php include 'indexmenu.html.php'; ?>
@@ -39,7 +38,7 @@
           <th scope="col">id</th>
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
-          <th scope="col">Âge</th>
+          <th scope="col">numero</th>
           <th scope="col">Niveau</th>
           <th scope="col">Classe</th>
         </tr>
