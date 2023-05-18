@@ -17,10 +17,20 @@
 <body>
 <?php include 'indexmenu.html.php'; ?>
 
-
-
+<div class="row justify-content-center ">
+  <div class="col-md-4"></div>
+<div class="form-group">
+            <label for="sort-select"></label>
+            <select id="sort-select" class="form-control small-select" style="width: 150px;">
+                <option value="name">trier par</option>
+                <option value="age">nom</option>
+            </select>
+            </div>
+        </div>
+        </div>
   <div class="container">
     <h1>Liste  des élèves</h1>
+    
     <button id="btnAjouter" class="btn btn-outline-primary btn-sm">Ajouter</button>
 
     <table class="table">
