@@ -21,19 +21,19 @@ $router->post('/menu', 'MenuController@display');
 
 $router->get('/eleve', 'EleveController@affichel');
 $router->post('/eleve', 'EleveController@affichel');
-
-
 $router->post('/addEleve', 'EleveController@inserer');
+
+
 
 
 $router->get('/niveau', 'NiveauController@affichel');
 $router->post('/niveau', 'NiveauController@affichel');
+$router->post('/addNiveau', 'NiveauController@inserer');
 
 
 
 $router->get('/annee', 'AnneeController@affichel');
 $router->post('/annee', 'AnneeController@affichel');
-
 $router->get('/addAnnee', 'AnneeController@inserer');
 
 

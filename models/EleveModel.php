@@ -27,7 +27,7 @@ class EleveModel extends MyConnect
 
 public function insert($nom, $prenom, $telephone, $datenaissance, $identification, $idannee, $idclasse)
 {
-    $inserer = 'INSERT INTO eleves (nom, prenom, telephone, date_naissance, identification, id_annee, id_classe) 
+    $inserer = 'INSERT INTO eleves (nom, prenom, telephone, date_naissance, identification, id_annee, id_classe)
                 VALUES (:nom, :prenom, :telephone, :datenaissance, :identification, :idannee, :idclasse)';
     $sow = $this->bd->prepare($inserer);
 
@@ -49,5 +49,6 @@ public function insert($nom, $prenom, $telephone, $datenaissance, $identificatio
     //     return false;
     // }
 }
+
 
 }

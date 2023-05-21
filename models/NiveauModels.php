@@ -21,6 +21,24 @@ class NiveauModel extends MyConnect
   return $affiche->fetchAll();
 
 }
+public function insert($nom)
+{
+    $inserer = 'INSERT INTO niveau (nom)
+                VALUES (:nom)';
+    $sow = $this->bd->prepare($inserer);
 
+    $sow->bindParam(':nom', $nom);
+   
+
+    $sow->execute();
+
+    // if ($sow->execute()) {
+    //     echo "Enregistrement effectué avec succès";
+    //     return true;
+    // } else {
+    //     echo "Une erreur s'est produite lors de l'enregistrement";
+    //     return false;
+    // }
+}
 
 }
