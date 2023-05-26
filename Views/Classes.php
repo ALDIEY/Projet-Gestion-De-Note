@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container py-4">
-    <h1 class="text-center mb-4">Gestion des classes</h1>
-    <div class="card">
-      <div class="card-header">
+<div class="menu-container">
+  <!-- Inclure le contenu du fichier "menu.html" -->
+  <?php include 'menu.php'; ?>
+</div>
+  <div class="container py-4 bg-dark text-white">
+    
+    <div class="card ">
+      <div class="card-header bg-dark text-white">
         <h2 class="card-title">Liste des classes</h2>
       </div>
       <div class="card-body">
@@ -20,24 +24,25 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>id</th>
+             
               <th>nom</th>
               
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-           <?php foreach($classes as $classe): ?>
-            <tr>
-            <td><?= $classe->nom?></td>
-            <td><?=$classe->id?></td>
-            <td><?= $classe->niveau?></td>
-            <td>
-                  <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">Modifier</button>
-                  <button class="btn btn-danger btn-sm"
-                  data-toggle="modal" data-target="#deleteModal">Supprimer</button>
-            </td>
+            <?php foreach ($data as $key => $classe): ?>
+            <tr class="<?php echo ($key % 2 == 0) ? 'table-dark' : 'table-light'; ?>">
+              <td><?php echo $classe['nom']; ?></td>
+              <td>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal<?php echo $anee['id']; ?>">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+                
+              </td>
             </tr>
+            <?php endforeach; ?>
+          </tbody>
             <!-- Modal ajouter -->
               <div class="modal fade" id="addModal" tabindex="-1" *
               role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
@@ -72,7 +77,7 @@
                 </div>
               </div>
             </div>
-            <?php endforeach; ?>
+            
           </tbody>
         </table>
       </div>

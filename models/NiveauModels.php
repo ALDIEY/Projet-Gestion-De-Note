@@ -28,17 +28,20 @@ public function insert($nom)
     $sow = $this->bd->prepare($inserer);
 
     $sow->bindParam(':nom', $nom);
-   
+    if ($sow->execute())
+    { 
+        return true;
+    } else {
+        return false;
+    }
+}
+public function delete($id)
+{
+    $supprimer = 'DELETE FROM niveau WHERE id_niveau = :id_niveau';
+    $sow = $this->bd->prepare($supprimer);
+
+    $sow->bindParam(':id_niveau', $id);
 
     $sow->execute();
-
-    // if ($sow->execute()) {
-    //     echo "Enregistrement effectué avec succès";
-    //     return true;
-    // } else {
-    //     echo "Une erreur s'est produite lors de l'enregistrement";
-    //     return false;
-    // }
 }
-
 }

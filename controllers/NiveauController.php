@@ -27,10 +27,29 @@ public function inserer()
     $niveau = new NiveauModel();
 
     if ($niveau->insert($nom)) {
-        echo "succès.";
+      header("Location: http://localhost:8000/niveau",TRUE,303);
     } else {
         echo ".";
     }
 }
+}
+public function delete()
+{
+    if (isset($_POST['supprimer']))
+    {
+        $idAnnee =(int)$_POST['id_niveau']; // ID de l'élève à supprimer
+        
+        $annee = new NiveauModel();
+        
+        
+        if ($annee->delete($idAnnee)) {
+          header("Location: http://localhost:8000/niveau",TRUE,303);
+      exit();
+        }
+        else {
+          header("Location: http://localhost:8000/niveau",TRUE,303);
+      }
+            
+    }
 }
 }

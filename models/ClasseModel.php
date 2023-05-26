@@ -17,7 +17,7 @@ class ClasseModel extends MyConnect
 
 public function affiche()
 {
-   $affiche= $this->bd->query('SELECT * FROM classes');
+   $affiche= $this->bd->query('SELECT * FROM classe');
    return $affiche->fetchAll();
 
 }

@@ -15,21 +15,21 @@
   <!-- Inclure le contenu du fichier "menu.html" -->
   <?php include 'menu.php'; ?>
 </div>
-  <div class="container py-4">
-    <h1 class="text-center mb-4">Gestion des niveau</h1>
+  <div class="container py-4 bg-dark text-white">
+    
     <div class="card">
-      <div class="card-header">
+      <div class="card-header bg-dark text-white">
         <h2 class="card-title">Liste des niveau</h2>
       </div>
       <div class="card-body">
         <div class="d-flex justify-content-end mb-3">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Ajouter une classe</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Ajouter un niveau</button>
         </div>
         <table class="table table-striped">
           <thead>
             <tr>
               <th>detail</th>
-              <th>id</th>
+              
               <th>nom</th>
             
             </tr>
@@ -39,17 +39,22 @@
             <tr>
               <td>
               <a href="#" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Détails">
-      <i class="fas fa-plus-circle"></i>
+              <i class="fas fa-plus-circle"></i>
               </td>
-            <td><?php echo $niveau["id_niveau"]; ?></td>
+            
             <td><?php echo $niveau["nom"]; ?></td>
            
         
             <td>
-            <a href="#" class="text-danger mr-2" data-toggle="tooltip"
-                       data-placement="top" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="text-primary" data-toggle="tooltip"
-                        data-placement="top" title="Modifier"><i class="fas fa-edit"></i></a>
+            <button type="button" class="btn btn-danger" data-toggle="modal"
+                 data-target="#deleteModal<?php echo $niveau['id_niveau']; ?>">
+                  <i class="fas fa-trash-alt"></i>
+    </button>
+    <button type="button" class="btn btn-primary btn-sm btn-edit"
+    data-toggle="modal" data-target="#editModal<? echo $niveau['id']; ?>">
+  <i class="fas fa-edit"></i>
+</button>
+
             </td>
             </tr>
             <!-- Modal ajouter -->
@@ -64,7 +69,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form action="/addNiveau"  method="POST">
+                    <form action=""  method="POST">
                       <div class="form-group">
                         <label for="niveau">nom:</label>
                         <input type="text" class="form-control" id="nom" name="nom">
@@ -85,26 +90,32 @@
       </div>
     </div>
 
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
-     aria-labelledby="deleteModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="deleteModalLabel">Supprimer une classe</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Êtes-vous sûr de vouloir supprimer cette classe ?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger">Supprimer</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-          </div>
-        </div>
+    <!-- modale de suppression -->
+    <?php foreach($data as $niveau): ?>
+  <div class="modal fade" id="deleteModal<?php echo $niveau['id_niveau']; ?>"
+  tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Supprimer un élève</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>vouler vous vraiment supprimer cette annee ?</p>
+      </div>
+      <div class="modal-footer">
+        <form method="POST" action="/SupNiveau">
+          <input type="hidden" name="id_niveau" value="<?php echo $niveau['id_niveau']; ?>" >
+          <input type="submit" name="supprimer" class="btn btn-danger" value="Supprimer" >
+        </form>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
       </div>
     </div>
+  </div>
+</div>
+<?php endforeach; ?>
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog"
     aria-labelledby="editModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
